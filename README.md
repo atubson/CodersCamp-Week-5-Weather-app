@@ -1,2 +1,3 @@
-# CodersCamp-Week-5-Weather-app
-Aplikacja pogodowa w React.
+# React Frontend Starter
+
+Zastaw plików umożliwiających rozpoczęcie aplikacji Reactowej zgodnej ze standardami ustalonymi w ramach CodersCrew.
