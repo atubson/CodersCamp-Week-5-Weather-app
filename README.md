@@ -1,1 +1,3 @@
-CodersCamp week 5 - weather app
+# React Frontend Starter
+
+Zastaw plików umożliwiających rozpoczęcie aplikacji Reactowej zgodnej ze standardami ustalonymi w ramach CodersCrew.
