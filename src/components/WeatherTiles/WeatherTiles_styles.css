@@ -1,0 +1,17 @@
+.tile{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 5px;
+  margin: 5px;
+}
+
+.weather-board > .tile {
+  border-bottom: 2px solid gray;
+}
+
+.tile:last-child{
+  border-bottom: 0;
+}
+
+
