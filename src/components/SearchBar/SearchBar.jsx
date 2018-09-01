@@ -10,16 +10,13 @@ export default class SearchBar extends React.Component {
   }
 
   onContentChange(event) {
-    console.log(event.target.value);
     this.setState({ text: event.target.value });
   }
 
   onEnterPressed(event) {
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter' && this.state.text.replace(/ /g, '') !== '') {
       this.props.cityName(this.state.text);
       this.setState({ text: '' });
-      //dodaj text z search box do listy i zrob update requestu z tym tekstem
-      console.log(event.target.value);
     }
   }
 
