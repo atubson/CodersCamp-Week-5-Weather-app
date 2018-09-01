@@ -68,8 +68,7 @@ class CityList extends PureComponent {
   }
   
   componentWillReceiveProps() {
-	this.addCity(this.props.text);
-    console.log('received props'); 
+	  this.addCity(this.props.text);
   }
 
   render() {
