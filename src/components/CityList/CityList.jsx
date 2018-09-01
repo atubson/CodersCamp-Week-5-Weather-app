@@ -22,7 +22,7 @@ class CityList extends PureComponent {
   }
 
   addCity(city) {
-    if (!cityList.includes(city)) {
+    if (!cityList.includes(city) && city != '') {
       cityList.unshift(city);
       this.refreshCityList();
     } else this.refreshCityList();
@@ -65,6 +65,11 @@ class CityList extends PureComponent {
     cityList.splice(cityList.indexOf(city), 1);
     this.refreshCityList();
     this.forceUpdate();
+  }
+  
+  componentWillReceiveProps() {
+	this.addCity(this.props.text);
+    console.log('received props'); 
   }
 
   render() {
