@@ -2,7 +2,7 @@ import React, { PureComponent, Fragment } from 'react';
 import axios from 'axios';
 import {workWithResponse} from './Request';
 import WeatherBoard from '../../components/WeatherBoard/WeatherBoard';
-
+import CityList from '../../components/CityList/CityList';
 
 
 class App extends PureComponent {
@@ -36,6 +36,11 @@ class App extends PureComponent {
 
     return (<Fragment>
         <WeatherBoard weatherList = {this.state.response} />
+        <CityList
+          text={this.state.searchCity}
+          changeCity={city => this.setState({ searchCity: city }, this.doRequest)}
+          color="primary"
+        />
     </Fragment>);
   }
 }
