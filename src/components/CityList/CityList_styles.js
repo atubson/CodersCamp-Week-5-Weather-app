@@ -1,16 +1,19 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  padding: var(--space-lg);
   font-size: var(--font-xl);
-  width: 300px;
-  height: 441px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: rgba(255, 255, 255, 0.4);
-  margin: 20px;
-  border: 3px solid #0097d6;
+  font-family: var(--mainFont);
+  font-weight: var(--medium);
+  color: var(--text1);
+  width: 30%;
+  height: 100%;
+  float: right;
   border-radius: 15px;
+  position: absolute;
+  right: 0;
+  border: 3px solid rgba(0, 151, 214, 0.6);
+  background-color: rgba(255, 255, 255, 0.6);
   overflow-y: scroll;
 
   ::-webkit-scrollbar {
@@ -37,7 +40,6 @@ export const Container = styled.div`
 
 export const UnorderedList = styled.ul`
   cursor: pointer;
-  padding: 20px;
 `;
 
 export const ListItem = styled.li`
