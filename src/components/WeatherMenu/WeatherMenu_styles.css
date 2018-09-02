@@ -1,9 +1,10 @@
 .search-city {
   text-align: center;
-  margin-top: 50px;
-  font-family: "Arial Black", Gadget, sans-serif;
-  font-size: 40px;
-  color: #222428;
+  margin-top: var(--space-xxl);
+  font-family: var(--headerFont);
+  font-weight: var(--bold);
+  font-size: var(--font-xxl-lh);
+  color: var(--text1);
 }
  .weather-menu{
    text-align: center;
@@ -11,8 +12,8 @@
  }
 
  .refresh-button{
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: var(--space-xxl);;
+    margin-bottom: var(--space-xxl);;
     margin-left: auto;
     margin-right: auto;
     width: 50px;

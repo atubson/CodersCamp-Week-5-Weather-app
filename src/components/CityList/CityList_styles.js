@@ -1,13 +1,20 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  margin: var(--space-lg);
+  padding: var(--space-lg);
   font-size: var(--font-xl);
-  color: ${props => (props.color === 'default' ? 'var(--text1)' : 'var(--primary2)')};
-  width: 300px;
+  font-family: var(--mainFont);
+  font-weight: var(--medium);
+  color: var(--text1);
+  width: 30%;
+  height: 100%;
+  float: right;
+  border-radius: 15px;
   position: absolute;
-  top: 0;
   right: 0;
+  overflow-y: auto;
+  border: 3px solid rgba(0, 151, 214, 0.6);
+  background-color: rgba(255, 255, 255, 0.6);
 `;
 
 export const UnorderedList = styled.ul`
@@ -26,7 +33,7 @@ export const ListItem = styled.li`
 export const City = styled.div`
   grid-area: city;
   &:hover {
-    color: var(--grey1);
+    color: #0097d6;
   }
 `;
 
