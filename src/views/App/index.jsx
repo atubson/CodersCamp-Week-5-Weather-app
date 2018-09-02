@@ -3,6 +3,7 @@ import axios from 'axios';
 import {workWithResponse} from './Request';
 import WeatherBoard from '../../components/WeatherBoard/WeatherBoard';
 import WeatherMenu from '../../components/WeatherMenu/WeatherMenu';
+import CityList from '../../components/CityList/CityList';
 
 const API_KEY = '436d1eea572e5d346f8cd5eb7c8dfa14';
 
@@ -36,14 +37,19 @@ class App extends PureComponent {
       return <div />;
     }
 
-    return <Fragment>
+    return (<Fragment>
         <WeatherMenu
           searchCity={this.state.searchCity}
           updateSearchCity={city => this.setState({ searchCity: city }, this.doRequest)}
           refresh={this.doRequest}
         />
-        <WeatherBoard weatherList={this.state.response} />
-      </Fragment>;
+        <WeatherBoard weatherList = {this.state.response} />
+        <CityList
+          text={this.state.searchCity}
+          changeCity={city => this.setState({ searchCity: city }, this.doRequest)}
+          color="primary"
+        />
+    </Fragment>);
   }
 }
 
