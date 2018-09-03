@@ -11,7 +11,7 @@ import {
   ITrash,
 } from './CityList_styles';
 
-const cityList = ['Wrocław', 'Paryż', 'New York'];
+const cityList = ['Wrocław', 'Paryż', 'New York', 'London', 'Tampa', 'Washington', 'San Francisco', 'Chicago', 'Seattle', 'Pittsburgh', 'Algiers', 'Buenos Aires', 'Yerevan', 'Vienna', 'Baku', 'Minsk', 'Brussels', 'Belo Horizonte' ];
 const favCityList = [];
 class CityList extends PureComponent {
   constructor(props) {
@@ -34,10 +34,16 @@ class CityList extends PureComponent {
     } else return <IHeart className="fas fa-heart"> </IHeart>;
   }
 
+  cityColorOnList(city) {
+    if (city === this.props.text) {
+      return 'selected';
+    } else return '';
+  }
+
   refreshCityList() {
     this.cityUlList = cityList.map(city => {
       return (
-        <ListItem key={city}>
+        <ListItem key={city} className={this.cityColorOnList(city)}>
           <City onClick={() => this.changeCity(city)}>{city}</City>
           <FavButton onClick={() => this.addToFav(city)}>{this.checkCity(city)}</FavButton>
           <DelButton onClick={() => this.deleteListItem(city)}>
@@ -66,15 +72,14 @@ class CityList extends PureComponent {
     this.refreshCityList();
     this.forceUpdate();
   }
-  
-  componentWillReceiveProps() {
-	  this.addCity(this.props.text);
+
+  UNSAFE_componentWillReceiveProps() {
+    this.addCity(this.props.text);
   }
 
   render() {
-    const { color } = this.props;
     return (
-      <Container color={color}>
+      <Container>
         <UnorderedList>{this.cityUlList}</UnorderedList>
       </Container>
     );
