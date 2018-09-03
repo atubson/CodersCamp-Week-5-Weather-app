@@ -12,9 +12,9 @@ export const Container = styled.div`
   border-radius: 15px;
   position: absolute;
   right: 0;
+  overflow-y: auto;
   border: 3px solid rgba(0, 151, 214, 0.6);
   background-color: rgba(255, 255, 255, 0.6);
-  overflow-y: scroll;
 
   ::-webkit-scrollbar {
     width: 15px;
@@ -57,7 +57,7 @@ export const ListItem = styled.li`
 export const City = styled.div`
   grid-area: city;
   &:hover {
-    color: var(--primary3);
+    color: #0097d6;
   }
 `;
 

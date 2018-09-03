@@ -2,8 +2,32 @@
   display: flex;
   justify-content:space-between;
   align-items: center;
-  padding: 5px;
-  margin: 5px;
+  padding: var(--space-sm);
+  margin-top: var(--space-sm);
+  margin-left: var(--space-xl);
+  margin-right: var(--space-xl);
+  margin-bottom: var(--space-sm);
+  font-family: var(--mainFont);
+  font-weight: var(--bold);
+  font-size: var(--font-md-lh);
+  color: var(--text1);
+}
+
+.tile:hover {
+  color: #0097D6;
+}
+
+.tile:hover .image{
+  transform: scale(1.5);
+  transition: ease 0.5s;
+}
+
+.tile:hover .humidity{
+  color: #0097D6;
+}
+
+.image{
+  transition: ease 0.5s;
 }
 
 .weather-board > .tile {
@@ -14,4 +38,11 @@
   border-bottom: 0;
 }
 
+.date {
+  font-weight: var(--bold);
+}
 
+.humidity {
+  color: var(--primary1);
+  font-weight: var(--bold);
+}

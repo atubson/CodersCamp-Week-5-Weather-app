@@ -8,6 +8,7 @@ body {
   font-weight: var(--regular);
   color: var(--text1);
   background-color: var(--background);
+  background-image: url('../images/bcg.png');
 }
 
 h1 {
@@ -74,4 +75,13 @@ label {
   line-height: var(--font-xs);
   font-weight: var(--bold);
   color: var(--text3);
+}
+
+.bottom-container {
+  width: 50%;
+  position: relative;
+  overflow:auto;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
 }
