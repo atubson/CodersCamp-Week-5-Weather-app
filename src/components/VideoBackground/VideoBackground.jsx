@@ -1,5 +1,4 @@
 import './VideoBackground_styles.css';
-
 // background z video
 import './VideoBackground_styles.css';
 import React, { Component } from 'react';
@@ -10,7 +9,6 @@ const currentDate = new Date();
 class VideoBackground extends Component {
   constructor(props) {
     super(props);
-
   }
 
   changeFilm() {
@@ -54,17 +52,14 @@ class VideoBackground extends Component {
         return 'storm_night';
       }
     }
-
-
   }
-
+  
   render() {
     if (!this.props.choosenCity) {
       return <div>brak propsa</div>;
     } else {
-
-      return <video loop autoPlay>
-        <source src={'../../videos/' + this.changeFilm() + '.mp4'} type="video/mp4" />
+      return <video key={this.changeFilm()} loop autoPlay>
+        <source src={'/src/videos/' + this.changeFilm() + '.mp4'} type="video/mp4" />
       </video>;
     }
   }
