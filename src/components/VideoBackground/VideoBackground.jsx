@@ -53,18 +53,16 @@ class VideoBackground extends Component {
       }
     }
   }
-  
+
   render() {
     if (!this.props.choosenCity) {
       return <div>brak propsa</div>;
     } else {
-      return <video key={this.changeFilm()} loop autoPlay>
+      return <video muted key={this.changeFilm()} loop autoPlay>
         <source src={'/src/videos/' + this.changeFilm() + '.mp4'} type="video/mp4" />
       </video>;
     }
   }
 }
-
-// ReactDOM.render(<VideoBackground />, document.getElementById('root'));
 
 export default VideoBackground;

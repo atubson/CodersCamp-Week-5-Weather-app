@@ -11,10 +11,12 @@ export default class WeatherMenu extends Component {
   render() {
     return (
       <div className="weather-menu">
+      <div className="top-container">
         <div className="search-city">{this.props.searchCity}</div>
         <div className="refresh-button" onClick={this.props.refresh}>
           {' '}
         </div>
+      </div>
         <SearchBar cityName={this.props.updateSearchCity} />
       </div>
     );
