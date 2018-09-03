@@ -36,18 +36,22 @@ export const Container = styled.div`
     border-radius: 10px;
     background-color: #555;
   }
+  ::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
 `;
 
 export const UnorderedList = styled.ul`
   cursor: pointer;
+  display: grid;
+  grid-row-gap: 10px;
 `;
 
 export const ListItem = styled.li`
   display: grid;
   justify-content: flex-end;
-  grid-gap: 10px;
-  grid-template-columns: 2fr 25px 25px;
-  grid-template-rows: 35px;
+  grid-column-gap: 10px;
+  grid-template-columns: 2fr 15px 15px;
   grid-template-areas: 'city favbtn delbtn';
   &.selected {
     color: var(--primary3);
@@ -63,10 +67,12 @@ export const City = styled.div`
 
 export const FavButton = styled.div`
   grid-area: favbtn;
+  align-self: center;
 `;
 
 export const DelButton = styled.div`
   grid-area: delbtn;
+  align-self: center;
 `;
 
 export const IHeart = styled.i`
