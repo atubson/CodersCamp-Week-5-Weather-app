@@ -1,6 +1,6 @@
 import React, { PureComponent, Fragment } from 'react';
 import axios from 'axios';
-import {workWithResponse} from './Request';
+import { workWithResponse } from './Request';
 import WeatherBoard from '../../components/WeatherBoard/WeatherBoard';
 import WeatherMenu from '../../components/WeatherMenu/WeatherMenu';
 import CityList from '../../components/CityList/CityList';
@@ -37,19 +37,23 @@ class App extends PureComponent {
       return <div />;
     }
 
-    return (<Fragment>
+    return (
+      <Fragment>
         <WeatherMenu
           searchCity={this.state.searchCity}
           updateSearchCity={city => this.setState({ searchCity: city }, this.doRequest)}
           refresh={this.doRequest}
         />
-        <WeatherBoard weatherList = {this.state.response} />
-        <CityList
-          text={this.state.searchCity}
-          changeCity={city => this.setState({ searchCity: city }, this.doRequest)}
-          color="primary"
-        />
-    </Fragment>);
+        <div className="bottom-container">
+          <WeatherBoard weatherList={this.state.response} />
+          <CityList
+            text={this.state.searchCity}
+            changeCity={city => this.setState({ searchCity: city }, this.doRequest)}
+            color="primary"
+          />
+        </div>
+      </Fragment>
+    );
   }
 }
 
