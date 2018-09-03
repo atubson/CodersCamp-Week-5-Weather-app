@@ -66,7 +66,18 @@ module.exports = {
           },
         ],
       },
-    ],
+      {
+        test: /\.(mov|mp4)$/,
+        use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: '[path][name].[ext]'
+          }
+        }
+        ]
+     }
+    ]
   },
   plugins: [
     new CleanWebpackPlugin([path.resolve(__dirname, 'build')]),
