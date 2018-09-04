@@ -37,7 +37,7 @@ class VideoBackground extends Component {
       if (currentDate.getHours() <= 20 && currentDate.getHours() >= 6) {
         return 'snow_day';
       } else {
-        return 'snow_night';
+        return 'snow_night_test';
       }
     } else if (this.props.choosenCity[0].weatherId >= 500 && this.props.choosenCity[0].weatherId <= 531) { /* rain-sun */
       if (currentDate.getHours() <= 20 && currentDate.getHours() >= 6) {
@@ -55,8 +55,8 @@ class VideoBackground extends Component {
       return <div>brak propsa</div>;
     } else {
       return <video muted key={this.changeFilm()} loop autoPlay>
-        <source src={`/src/videos/${this.changeFilm()}.mp4`} type="video/mp4" />
-      </video>;
+          <source src={`/src/videos/${this.changeFilm()}.mp4`} type="video/mp4" />
+        </video>;
     }
   }
 }
