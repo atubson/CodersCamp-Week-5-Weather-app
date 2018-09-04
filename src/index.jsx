@@ -12,7 +12,7 @@ import './videos/mist_day.mp4';
 import './videos/rain_sun_day.mp4';
 import './videos/rain_sun_night.mp4';
 import './videos/snow_day.mp4';
-import './videos/snow_night.mp4';
+import './videos/snow_night_test.mp4';
 import './videos/storm_day.mp4';
 import './videos/sun_clouds_day.mp4';
 import './videos/sun_clouds_night.mp4';
