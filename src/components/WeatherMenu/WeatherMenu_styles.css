@@ -19,7 +19,7 @@
     width: 50px;
     height: 50px;
     background-size: cover;
-    background-image: url('../../images/refresh-button.png');
+    background-image: url('../../videos/refresh-button.png');
     align-self: center;
     transition: ease 0.5s;
  }

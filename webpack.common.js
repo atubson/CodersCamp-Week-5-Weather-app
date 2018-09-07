@@ -8,7 +8,7 @@ console.log(path.resolve(__dirname, 'src', 'components'));
 module.exports = {
   entry: './src/index.jsx',
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'docs'),
     filename: '[name].js',
   },
   node: {
@@ -80,7 +80,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin([path.resolve(__dirname, 'build')]),
+    new CleanWebpackPlugin([path.resolve(__dirname, 'docs')]),
 
     new HtmlWebpackPlugin({
       template: 'src/index.html',
