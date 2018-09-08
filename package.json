@@ -6,9 +6,12 @@
   "engines": {
     "yarn": "1.7.0"
   },
+  "homepage": "https://laskowiczpawel.github.io/CodersCamp-Week-5-Weather-app/",
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "Konrad Szwarc",
   "license": "MIT",
@@ -62,6 +65,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "gh-pages": "^1.2.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",

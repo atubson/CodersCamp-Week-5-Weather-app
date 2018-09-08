@@ -19,7 +19,7 @@ module.exports = merge(common, {
     }),
   ],
   devServer: {
-    contentBase: path.join(__dirname, 'public'),
+    contentBase: path.join(__dirname, 'src', 'videos'),
     compress: true,
     port: 3000,
     historyApiFallback: true,

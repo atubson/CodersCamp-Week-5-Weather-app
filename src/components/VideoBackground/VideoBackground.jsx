@@ -55,7 +55,7 @@ class VideoBackground extends Component {
       return <div>brak propsa</div>;
     } else {
       return <video muted key={this.changeFilm()} loop autoPlay>
-          <source src={`/src/videos/${this.changeFilm()}.mp4`} type="video/mp4" />
+          <source src={`${this.changeFilm()}.mp4`} type="video/mp4" />
         </video>;
     }
   }
