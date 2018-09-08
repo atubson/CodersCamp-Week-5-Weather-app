@@ -1,0 +1,148 @@
+.tile{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: var(--space-sm);
+  margin-top: var(--space-sm);
+  margin-left: var(--space-xl);
+  margin-right: var(--space-xl);
+  margin-bottom: var(--space-sm);
+  font-family: var(--mainFont);
+  font-weight: var(--bold);
+  font-size: var(--font-md-lh);
+  color: var(--text1);
+}
+
+.tile:hover {
+  color: #0097D6;
+}
+
+.tile:hover .image{
+  transform: scale(1.5);
+  transition: ease 0.5s;
+}
+
+.tile:hover .humidity{
+  color: #0097D6;
+}
+
+.image{
+  transition: ease 0.5s;
+}
+
+.weather-board > .tile {
+  border-bottom: 2px solid gray;
+}
+
+.tile:last-child{
+  border-bottom: 0;
+}
+
+.date {
+  font-weight: var(--bold);
+}
+
+.humidity {
+  color: var(--primary1);
+  font-weight: var(--bold);
+}
+
+.weather-board{
+  width: 65%;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  border: 3px solid rgba(0, 151, 214, 0.6);
+}
+
+.background{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+
+
+
+#search-bar{
+  width: 35%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 15px;
+  font-size:24px;
+  text-align: center;
+  display: block;
+  border: none;
+  transition: ease 0.3s;
+  border: solid 3px white;
+  outline: none;
+  color: #222428;
+  font-family: var(--mainFont);
+
+  box-sizing: border-box;
+  opacity: 0.6;
+}
+
+#search-bar:hover{
+  border: 3px solid #0097D6;
+  transition: ease 0.3s;
+}
+
+#search-bar:focus{
+  opacity: 1;
+  border: 3px solid #0097D6;
+  box-shadow: 1px 1px 15px 0.5px #0097d6;
+  transform: translate(0,-1.5px);
+  transition-delay: 0s !important;
+}
+video{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
+  opacity: 0.7;
+}
+.search-city {
+  text-align: center;
+  margin-top: var(--space-xxl);
+  font-family: var(--headerFont);
+  font-weight: var(--bold);
+  font-size: var(--font-xxl-lh);
+  color: var(--text1);
+}
+ .weather-menu{
+   text-align: center;
+   display: block;
+ }
+
+ .refresh-button{
+    margin-top: var(--space-xxl);;
+    margin-bottom: var(--space-xxl);;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-image: url(./ad894bd3e5e31903500a0808bbe89714.png);
+    align-self: center;
+    transition: ease 0.5s;
+ }
+
+ .refresh-button:hover{
+   transform: rotate(360deg);
+   transition: ease 0.5s;
+   cursor: pointer;
+ }
+
+/*# sourceMappingURL=styles.css.map*/

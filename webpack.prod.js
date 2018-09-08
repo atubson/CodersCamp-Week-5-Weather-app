@@ -11,7 +11,7 @@ module.exports = merge(common, {
   plugins: [
     new CopyWebpackPlugin([
       {
-        from: 'public',
+        from: 'src/videos',
       },
     ]),
   ],

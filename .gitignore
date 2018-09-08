@@ -4,9 +4,6 @@ node_modules
 # testing
 coverage
 
-# production
-build
-
 # private files
 dev.js
 
@@ -23,4 +20,3 @@ yarn-error.log*
 
 .idea
 react-ui-framework
-/public
